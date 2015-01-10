@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Swift Programming Language">
+      <FileRef
+         location = "group:GuidedTour.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SelfPractice.playground">
+      </FileRef>
+   </Group>
+</Workspace>
