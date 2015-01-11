@@ -8,7 +8,22 @@
          location = "group:GuidedTour.playground">
       </FileRef>
       <FileRef
-         location = "group:SelfPractice.playground">
+         location = "group:SelfPractice-const-var.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SelfPractice-operators.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SelfPractice-string.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SelfPractice-collections.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SelfPractice-functions.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SelfPractice-closures.playground">
       </FileRef>
    </Group>
 </Workspace>
