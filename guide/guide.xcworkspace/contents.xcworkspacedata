@@ -25,5 +25,8 @@
       <FileRef
          location = "group:SelfPractice-closures.playground">
       </FileRef>
+      <FileRef
+         location = "group:SelfPractice-enum.playground">
+      </FileRef>
    </Group>
 </Workspace>
