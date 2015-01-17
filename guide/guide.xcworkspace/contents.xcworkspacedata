@@ -28,5 +28,8 @@
       <FileRef
          location = "group:SelfPractice-enum.playground">
       </FileRef>
+      <FileRef
+         location = "group:SelfPractice-class-struct.playground">
+      </FileRef>
    </Group>
 </Workspace>
