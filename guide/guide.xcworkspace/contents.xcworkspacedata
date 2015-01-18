@@ -3,6 +3,13 @@
    version = "1.0">
    <Group
       location = "container:"
+      name = "iOS Apps">
+      <FileRef
+         location = "group:iOS Apps/ToDoList/ToDoList.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
       name = "Swift Programming Language">
       <FileRef
          location = "group:GuidedTour.playground">
