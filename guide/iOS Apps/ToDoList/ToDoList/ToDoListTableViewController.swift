@@ -24,10 +24,24 @@ class ToDoListTableViewController: UITableViewController {
         }
     }
     
+    func getInstallationDate() -> NSDate {
+        var date: NSDate!
+        if let sourceFile = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent("Info.plist") {
+            var err: NSError?
+            var attrs = NSFileManager.defaultManager().attributesOfItemAtPath(sourceFile, error: &err) as Dictionary?
+            if let attr = attrs {
+                date = attr[NSFileModificationDate] as NSDate
+            } else {
+                date = NSDate()
+            }
+        } else {
+            date = NSDate()
+        }
+        return date
+    }
+    
     func loadInitialData() {
-        self.todoItems.append(ToDoItem(itemName: "Buy milk"))
-        self.todoItems.append(ToDoItem(itemName: "Buy eggs"))
-        self.todoItems.append(ToDoItem(itemName: "Buy a book"))
+        self.todoItems.append(ToDoItem(itemName: "Learn how to use To-Do List", creationDate: self.getInstallationDate()))
     }
 
     override func viewDidLoad() {
@@ -63,6 +77,7 @@ class ToDoListTableViewController: UITableViewController {
 
         let item = self.todoItems[indexPath.row]
         cell.textLabel?.text = item.itemName
+        cell.detailTextLabel?.text = "\(item.creationDate)"
         cell.accessoryType = item.completed ? UITableViewCellAccessoryType.Checkmark : UITableViewCellAccessoryType.None
 
         return cell

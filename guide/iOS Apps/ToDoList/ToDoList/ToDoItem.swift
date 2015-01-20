@@ -13,8 +13,12 @@ class ToDoItem: NSObject {
     var completed: Bool = false
     private(set) var creationDate: NSDate!
     
-    init(itemName: String) {
+    init(itemName: String, creationDate: NSDate) {
         self.itemName = itemName
-        
+        self.creationDate = creationDate
+    }
+    
+    convenience init(itemName: String) {
+        self.init(itemName: itemName, creationDate: NSDate())
     }
 }
