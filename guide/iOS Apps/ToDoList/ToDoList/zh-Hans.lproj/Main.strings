@@ -1,0 +1,15 @@
+
+/* Class = "IBUILabel"; text = "Mow the lawn"; ObjectID = "D95-Bd-IVW"; */
+"D95-Bd-IVW.text" = "Mow the lawn";
+
+/* Class = "IBUITextField"; placeholder = "New to-do item"; ObjectID = "J6X-Ku-WfR"; */
+"J6X-Ku-WfR.placeholder" = "新的待办事项";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "J9S-Dg-SsA"; */
+"J9S-Dg-SsA.text" = "Subtitle";
+
+/* Class = "IBUINavigationItem"; title = "Add To-Do Item"; ObjectID = "JO2-xA-3Lj"; */
+"JO2-xA-3Lj.title" = "追加待办事项";
+
+/* Class = "IBUINavigationItem"; title = "To-Do List"; ObjectID = "dYm-hQ-fW9"; */
+"dYm-hQ-fW9.title" = "待办事项列表";

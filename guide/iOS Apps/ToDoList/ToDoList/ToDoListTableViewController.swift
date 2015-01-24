@@ -41,7 +41,7 @@ class ToDoListTableViewController: UITableViewController {
     }
     
     func loadInitialData() {
-        self.todoItems.append(ToDoItem(itemName: "Learn how to use To-Do List", creationDate: self.getInstallationDate()))
+        self.todoItems.append(ToDoItem(itemName: NSLocalizedString("DemoItem", comment: ""), creationDate: self.getInstallationDate()))
     }
 
     override func viewDidLoad() {

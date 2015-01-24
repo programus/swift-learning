@@ -1,0 +1,9 @@
+/*
+  InfoPlist.strings
+  ToDoList
+
+  Created by 王 元 on 15-01-23.
+  Copyright (c) 2015年 programus. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "To-Do List";
