@@ -3,6 +3,16 @@
    version = "1.0">
    <Group
       location = "container:"
+      name = "Mac Apps">
+      <FileRef
+         location = "group:Mac Apps/TrackMix/TrackMix.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Mac Apps/Now Widget/Now Widget.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
       name = "iOS Apps">
       <FileRef
          location = "group:iOS Apps/ToDoList/ToDoList.xcodeproj">
