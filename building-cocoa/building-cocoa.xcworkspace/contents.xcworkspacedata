@@ -3,12 +3,12 @@
    version = "1.0">
    <Group
       location = "container:"
-      name = "Chapter3">
+      name = "Part I">
       <FileRef
-         location = "group:Chapter3/OnlyIB/SimpleAppIBOnly/SimpleAppIBOnly.xcodeproj">
+         location = "group:Part I/NoIB/SimpleAppWithoutIB/SimpleAppWithoutIB.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:Chapter3/NoIB/SimpleAppWithoutIB/SimpleAppWithoutIB.xcodeproj">
+         location = "group:Part I/OnlyIB/SimpleAppIBOnly/SimpleAppIBOnly.xcodeproj">
       </FileRef>
    </Group>
 </Workspace>
