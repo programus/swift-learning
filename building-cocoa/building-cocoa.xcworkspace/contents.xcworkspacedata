@@ -11,4 +11,11 @@
          location = "group:Part I/OnlyIB/SimpleAppIBOnly/SimpleAppIBOnly.xcodeproj">
       </FileRef>
    </Group>
+   <Group
+      location = "container:"
+      name = "Part II">
+      <FileRef
+         location = "group:Part II/Calculator/Calculator.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>
