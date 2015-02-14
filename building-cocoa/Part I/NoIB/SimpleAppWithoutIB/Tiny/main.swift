@@ -43,18 +43,22 @@ class DemoView : NSView, NSWindowDelegate {
         
         // the following statements trace two polygons with n sides
         // and connect all of the vertices with lines
-        
-        NSColor.blackColor().set()  // set the drawing color to black
-        
         let limit = 2 * M_PI
         let step = limit / Double(n)
+        let hueStep = 1.0 / Double(n * n)
+        var hue = 0.0
         for var f: Double = 0; f < limit; f += step {
             let p1 = NSPoint(x: CGFloat(self.x(f)), y: CGFloat(self.y(f)))
             for var g: Double = 0; g < limit; g += step {
+                // set drawing color
+                NSColor(calibratedHue: CGFloat(hue), saturation: 1.0, brightness: 1.0, alpha: 1.0).set()
+                hue += hueStep
                 let p2 = NSPoint(x: CGFloat(self.x(g)), y: CGFloat(self.y(g)))
                 NSBezierPath.strokeLineFromPoint(p1, toPoint: p2)
             }
         }
+        let text: NSString = "Tiny"
+        text.drawInRect(self.bounds, withAttributes: nil)
     }
     
     func windowWillClose(notification: NSNotification) {
