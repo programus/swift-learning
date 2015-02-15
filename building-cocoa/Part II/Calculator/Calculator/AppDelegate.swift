@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Calculator
 //
-//  Created by 王 元 on 15-02-14.
-//  Copyright (c) 2015年 programus. All rights reserved.
+//  Created by Programus on 15-02-14.
+//  Copyright (c) 2015 programus. All rights reserved.
 //
 
 import Cocoa

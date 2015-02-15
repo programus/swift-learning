@@ -11,6 +11,7 @@
 		B66092291A8EBCE80020B986 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66092281A8EBCE80020B986 /* Images.xcassets */; };
 		B660922C1A8EBCE80020B986 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B660922A1A8EBCE80020B986 /* MainMenu.xib */; };
 		B66092381A8EBCE80020B986 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66092371A8EBCE80020B986 /* CalculatorTests.swift */; };
+		B66092421A9038B90020B986 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66092411A9038B90020B986 /* Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		B66092311A8EBCE80020B986 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66092361A8EBCE80020B986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B66092371A8EBCE80020B986 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
+		B66092411A9038B90020B986 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				B66092261A8EBCE80020B986 /* AppDelegate.swift */,
+				B66092411A9038B90020B986 /* Controller.swift */,
 				B66092281A8EBCE80020B986 /* Images.xcassets */,
 				B660922A1A8EBCE80020B986 /* MainMenu.xib */,
 				B66092241A8EBCE80020B986 /* Supporting Files */,
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B66092271A8EBCE80020B986 /* AppDelegate.swift in Sources */,
+				B66092421A9038B90020B986 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +397,7 @@
 				B660923D1A8EBCE80020B986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B660923E1A8EBCE80020B986 /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +406,7 @@
 				B66092401A8EBCE80020B986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
