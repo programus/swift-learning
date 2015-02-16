@@ -97,6 +97,7 @@ class Controller: NSObject {
             }
         }
         
+        aboutPanel.floatingPanel = true
         aboutPanel.makeKeyAndOrderFront(nil)
     }
 }
