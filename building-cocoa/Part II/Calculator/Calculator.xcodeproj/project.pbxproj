@@ -12,6 +12,7 @@
 		B660922C1A8EBCE80020B986 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B660922A1A8EBCE80020B986 /* MainMenu.xib */; };
 		B66092381A8EBCE80020B986 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66092371A8EBCE80020B986 /* CalculatorTests.swift */; };
 		B66092421A9038B90020B986 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66092411A9038B90020B986 /* Controller.swift */; };
+		B68FC4FF1A92106300A868AE /* AboutPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = B68FC4FD1A92106300A868AE /* AboutPanel.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		B66092361A8EBCE80020B986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B66092371A8EBCE80020B986 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		B66092411A9038B90020B986 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		B68FC4FE1A92106300A868AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutPanel.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				B66092411A9038B90020B986 /* Controller.swift */,
 				B66092281A8EBCE80020B986 /* Images.xcassets */,
 				B660922A1A8EBCE80020B986 /* MainMenu.xib */,
+				B68FC4FD1A92106300A868AE /* AboutPanel.xib */,
 				B66092241A8EBCE80020B986 /* Supporting Files */,
 			);
 			path = Calculator;
@@ -191,6 +194,7 @@
 			files = (
 				B66092291A8EBCE80020B986 /* Images.xcassets in Resources */,
 				B660922C1A8EBCE80020B986 /* MainMenu.xib in Resources */,
+				B68FC4FF1A92106300A868AE /* AboutPanel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +242,14 @@
 				B660922B1A8EBCE80020B986 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		B68FC4FD1A92106300A868AE /* AboutPanel.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B68FC4FE1A92106300A868AE /* Base */,
+			);
+			name = AboutPanel.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

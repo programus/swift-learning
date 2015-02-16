@@ -27,6 +27,8 @@ class Controller: NSObject {
     
     @IBOutlet weak var readout: NSTextField!
     
+    @IBOutlet var aboutPanel: NSPanel!
+    
     func displayX() {
         var s = NSString(format: "%15.10g", self.x)
         self.readout.stringValue = s
@@ -85,5 +87,16 @@ class Controller: NSObject {
         enterFlag = true
         
         self.displayX()
+    }
+    
+    @IBAction func showAboutPanel(sender: AnyObject) {
+        if aboutPanel == nil {
+            if !NSBundle.mainBundle().loadNibNamed("AboutPanel", owner: self, topLevelObjects: nil) {
+                NSLog("Load of AboutPanel.xib failed")
+                return
+            }
+        }
+        
+        aboutPanel.makeKeyAndOrderFront(nil)
     }
 }
