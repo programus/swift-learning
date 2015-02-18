@@ -66,9 +66,16 @@
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <font key="titleFont" metaFont="system"/>
                     </box>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jTS-b1-0gP">
+                        <rect key="frame" x="273" y="99" width="48" height="48"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Image" id="GAh-BU-RXZ"/>
+                    </imageView>
                 </subviews>
             </view>
             <point key="canvasLocation" x="355.5" y="258.5"/>
         </window>
     </objects>
+    <resources>
+        <image name="Image" width="1024" height="1024"/>
+    </resources>
 </document>
