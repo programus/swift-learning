@@ -675,7 +675,7 @@
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="682" y="416" width="379" height="295"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="379" height="295"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -826,6 +826,26 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hPL-02-KMy">
+                        <rect key="frame" x="140" y="221" width="100" height="26"/>
+                        <popUpButtonCell key="cell" type="push" title="Dec" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="10" imageScaling="proportionallyDown" inset="2" selectedItem="wa0-Xi-vfh" id="UaV-Kb-7w8">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="vL2-3u-gB1">
+                                <items>
+                                    <menuItem title="Hex" tag="16" id="rrh-eF-UQ9"/>
+                                    <menuItem title="Dec" state="on" tag="10" id="wa0-Xi-vfh"/>
+                                    <menuItem title="Octal" tag="8" id="ffa-6L-Jgb"/>
+                                    <menuItem title="Bin" tag="2" id="gvg-O4-9nm">
+                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                    </menuItem>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="setRadix:" target="ovS-g3-PnY" id="tIS-wu-3SM"/>
+                        </connections>
+                    </popUpButton>
                 </subviews>
             </view>
             <point key="canvasLocation" x="312.5" y="483.5"/>

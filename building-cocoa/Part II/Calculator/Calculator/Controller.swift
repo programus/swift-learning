@@ -23,6 +23,7 @@ class Controller: NSObject {
     var enterFlag = false
     var yFlag = false
     var operation = Operator.None
+    var radix = 10
     
     
     @IBOutlet weak var readout: NSTextField!
@@ -30,8 +31,30 @@ class Controller: NSObject {
     @IBOutlet var aboutPanel: NSPanel!
     
     func displayX() {
-        var s = NSString(format: "%15.10g", self.x)
+        var s:NSString!
+        switch radix {
+        case 2:
+            s = self.ltob(Int(x))
+        case 8:
+            s = NSString(format: "%o", Int(x))
+        case 10:
+            s = NSString(format: "%15.10g", self.x)
+        case 16:
+            s = NSString(format: "%x", Int(x))
+        default:
+            s = "0"
+        }
         self.readout.stringValue = s
+    }
+    
+    func ltob(var v: Int) -> String {
+        var ca = [Character](count: 32, repeatedValue: "0")
+        for i in 0..<ca.count {
+            if (v >> i) & 1 == 1 {
+                ca[ca.count - i - 1] = "1"
+            }
+        }
+        return String(ca)
     }
     
     @IBAction func clear(sender: AnyObject) {
@@ -45,6 +68,13 @@ class Controller: NSObject {
         self.yFlag = false
         self.enterFlag = false
         self.displayX()
+    }
+    
+    @IBAction func setRadix(sender: NSPopUpButton) {
+        if let item = sender.selectedItem {
+            self.radix = item.tag
+            self.displayX()
+        }
     }
     
     @IBAction func enterDigit(sender: AnyObject) {
