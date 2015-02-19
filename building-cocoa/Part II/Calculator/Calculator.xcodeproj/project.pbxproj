@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B66092271A8EBCE80020B986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66092261A8EBCE80020B986 /* AppDelegate.swift */; };
 		B66092291A8EBCE80020B986 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66092281A8EBCE80020B986 /* Images.xcassets */; };
 		B660922C1A8EBCE80020B986 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B660922A1A8EBCE80020B986 /* MainMenu.xib */; };
 		B66092381A8EBCE80020B986 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66092371A8EBCE80020B986 /* CalculatorTests.swift */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		B66092211A8EBCE80020B986 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66092251A8EBCE80020B986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B66092261A8EBCE80020B986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B66092281A8EBCE80020B986 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B660922B1A8EBCE80020B986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B66092311A8EBCE80020B986 /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +95,6 @@
 		B66092231A8EBCE80020B986 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				B66092261A8EBCE80020B986 /* AppDelegate.swift */,
 				B66092411A9038B90020B986 /* Controller.swift */,
 				B66092281A8EBCE80020B986 /* Images.xcassets */,
 				B660922A1A8EBCE80020B986 /* MainMenu.xib */,
@@ -260,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B66092271A8EBCE80020B986 /* AppDelegate.swift in Sources */,
 				B66092421A9038B90020B986 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

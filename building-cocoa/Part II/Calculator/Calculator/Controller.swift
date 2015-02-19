@@ -8,7 +8,8 @@
 
 import Cocoa
 
-class Controller: NSObject {
+@NSApplicationMain
+class Controller: NSObject, NSApplicationDelegate {
     enum Operator: Int {
         case None       = 0
         case Plus       = 1001
@@ -23,10 +24,11 @@ class Controller: NSObject {
     var enterFlag = false
     var yFlag = false
     var operation = Operator.None
-    var radix = 10
+    var radix = 0
     
     
     @IBOutlet weak var readout: NSTextField!
+    @IBOutlet weak var radixPopUp: NSPopUpButton!
     
     @IBOutlet var aboutPanel: NSPanel!
     
@@ -129,5 +131,14 @@ class Controller: NSObject {
         
         aboutPanel.floatingPanel = true
         aboutPanel.makeKeyAndOrderFront(nil)
+    }
+}
+
+extension Controller {
+    func applicationDidFinishLaunching(notification: NSNotification) {
+        if let item = radixPopUp.selectedItem {
+            radix = item.tag
+        }
+        self.clearAll(self)
     }
 }
