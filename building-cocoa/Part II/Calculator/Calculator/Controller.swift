@@ -87,7 +87,7 @@ class Controller: NSObject, NSApplicationDelegate {
         }
         
         if let cell: AnyObject = sender.selectedCell() {
-            x = x * 10.0 + Double(cell.tag())
+            x = x * Double(radix) + Double(cell.tag())
         }
         self.displayX()
     }

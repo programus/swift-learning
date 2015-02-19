@@ -14,7 +14,6 @@
         <customObject id="ovS-g3-PnY" userLabel="Controller" customClass="Controller" customModule="Calculator" customModuleProvider="target">
             <connections>
                 <outlet property="radixPopUp" destination="hPL-02-KMy" id="wrN-1n-3bl"/>
-                <outlet property="radixPopup" destination="hPL-02-KMy" id="2yc-3X-K05"/>
                 <outlet property="readout" destination="VJW-nK-59m" id="e8P-9b-NCB"/>
             </connections>
         </customObject>
@@ -672,7 +671,7 @@
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="682" y="416" width="379" height="295"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="379" height="295"/>
                 <autoresizingMask key="autoresizingMask"/>
