@@ -675,7 +675,7 @@
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="682" y="416" width="379" height="295"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="379" height="295"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -843,7 +843,7 @@
                             </menu>
                         </popUpButtonCell>
                         <connections>
-                            <action selector="setRadix:" target="ovS-g3-PnY" id="tIS-wu-3SM"/>
+                            <action selector="selectRadix:" target="ovS-g3-PnY" id="rhj-lN-jrd"/>
                         </connections>
                     </popUpButton>
                 </subviews>

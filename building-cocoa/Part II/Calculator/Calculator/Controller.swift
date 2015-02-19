@@ -70,7 +70,7 @@ class Controller: NSObject {
         self.displayX()
     }
     
-    @IBAction func setRadix(sender: NSPopUpButton) {
+    @IBAction func selectRadix(sender: NSPopUpButton) {
         if let item = sender.selectedItem {
             self.radix = item.tag
             self.displayX()
