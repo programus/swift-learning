@@ -671,7 +671,7 @@
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="682" y="416" width="379" height="295"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="379" height="295"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -832,7 +832,7 @@
                                     <menuItem title="Hex" tag="16" id="rrh-eF-UQ9"/>
                                     <menuItem title="Dec" state="on" tag="10" id="wa0-Xi-vfh"/>
                                     <menuItem title="Octal" tag="8" id="ffa-6L-Jgb"/>
-                                    <menuItem title="Bin" tag="2" id="gvg-O4-9nm">
+                                    <menuItem title="Binary" tag="2" id="gvg-O4-9nm">
                                         <modifierMask key="keyEquivalentModifierMask"/>
                                     </menuItem>
                                 </items>
