@@ -29,6 +29,7 @@ class Controller: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var readout: NSTextField!
     @IBOutlet weak var radixPopUp: NSPopUpButton!
+    @IBOutlet weak var keyPad: NSMatrix!
     
     @IBOutlet var aboutPanel: NSPanel!
     
@@ -59,6 +60,39 @@ class Controller: NSObject, NSApplicationDelegate {
         return String(ca)
     }
     
+    func setHexWindow(toHex: Bool) {
+        let ysize = (keyPad.cellSize.height + keyPad.intercellSpacing.height) * 2
+        if let win = keyPad.window {
+            var frame = win.frame
+            if toHex {
+                frame.size.height += ysize
+                frame.origin.y -= ysize
+                win.setFrame(frame, display: true, animate: true)
+                
+                for row in 0...1 {
+                    keyPad.insertRow(0)
+                    for col in 0...2 {
+                        let val = 10 + row * 3 + col
+                        let cell = keyPad.cellAtRow(0, column: col) as NSButtonCell
+                        cell.tag = val
+                        cell.title = NSString(format: "%X", val)
+                    }
+                }
+                keyPad.sizeToCells()
+                keyPad.setNeedsDisplay()
+            } else {
+                frame.size.height -= ysize
+                frame.origin.y += ysize
+                for row in 0...1 {
+                    keyPad.removeRow(0)
+                }
+                keyPad.sizeToCells()
+                keyPad.setNeedsDisplay()
+                win.setFrame(frame, display: true, animate: true)
+            }
+        }
+    }
+    
     @IBAction func clear(sender: AnyObject) {
         self.x = 0.0
         self.displayX()
@@ -74,7 +108,18 @@ class Controller: NSObject, NSApplicationDelegate {
     
     @IBAction func selectRadix(sender: NSPopUpButton) {
         if let item = sender.selectedItem {
+            let oldRadix = radix
             self.radix = item.tag
+            
+            if oldRadix != radix && (oldRadix == 16 || radix == 16) {
+                self.setHexWindow(radix == 16)
+            }
+            
+            for cell in self.keyPad.cells {
+                let buttonCell = cell as NSButtonCell
+                buttonCell.enabled = buttonCell.tag < self.radix
+            }
+            
             self.displayX()
         }
     }
