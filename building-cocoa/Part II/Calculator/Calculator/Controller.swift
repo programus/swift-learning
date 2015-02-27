@@ -8,24 +8,23 @@
 
 import Cocoa
 
+enum Operator: Int {
+    case None       = 0
+    case Plus       = 1001
+    case Subtract   = 1002
+    case Multiply   = 1003
+    case Divide     = 1004
+    case Equals     = 1005
+}
+
 @NSApplicationMain
 class Controller: NSObject, NSApplicationDelegate {
-    enum Operator: Int {
-        case None       = 0
-        case Plus       = 1001
-        case Subtract   = 1002
-        case Multiply   = 1003
-        case Divide     = 1004
-        case Equals     = 1005
-    }
-    
     var x = 0.0
     var y = 0.0
     var enterFlag = false
     var yFlag = false
     var operation = Operator.None
     var radix = 0
-    
     
     @IBOutlet weak var readout: NSTextField!
     @IBOutlet weak var radixPopUp: NSPopUpButton!
@@ -121,6 +120,8 @@ class Controller: NSObject, NSApplicationDelegate {
             }
             
             self.displayX()
+            
+            (keyPad.window as CalcWindow).findButtons()
         }
     }
     
@@ -185,5 +186,6 @@ extension Controller {
             radix = item.tag
         }
         self.clearAll(self)
+        (keyPad.window as CalcWindow).findButtons()
     }
 }

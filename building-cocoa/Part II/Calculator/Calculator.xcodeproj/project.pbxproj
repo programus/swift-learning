@@ -22,6 +22,7 @@
 		B6D6E18B1A94765200322FED /* icon_256x256.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D6E1821A94765200322FED /* icon_256x256.png */; };
 		B6D6E18C1A94765200322FED /* icon_256x256@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D6E1831A94765200322FED /* icon_256x256@2x.png */; };
 		B6D6E18D1A94765200322FED /* icon_512x512.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D6E1841A94765200322FED /* icon_512x512.png */; };
+		B6F71C5C1AA0B4C30079C414 /* CalcWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71C5B1AA0B4C30079C414 /* CalcWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		B6D6E1821A94765200322FED /* icon_256x256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_256x256.png; path = icons/icon_256x256.png; sourceTree = "<group>"; };
 		B6D6E1831A94765200322FED /* icon_256x256@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_256x256@2x.png"; path = "icons/icon_256x256@2x.png"; sourceTree = "<group>"; };
 		B6D6E1841A94765200322FED /* icon_512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_512x512.png; path = icons/icon_512x512.png; sourceTree = "<group>"; };
+		B6F71C5B1AA0B4C30079C414 /* CalcWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalcWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				B66092411A9038B90020B986 /* Controller.swift */,
+				B6F71C5B1AA0B4C30079C414 /* CalcWindow.swift */,
 				B66092281A8EBCE80020B986 /* Images.xcassets */,
 				B660922A1A8EBCE80020B986 /* MainMenu.xib */,
 				B68FC4FD1A92106300A868AE /* AboutPanel.xib */,
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F71C5C1AA0B4C30079C414 /* CalcWindow.swift in Sources */,
 				B66092421A9038B90020B986 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

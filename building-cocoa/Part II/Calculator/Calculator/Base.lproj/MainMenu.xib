@@ -668,7 +668,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Calculator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+        <window title="Calculator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="CalcWindow" customModule="Calculator" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="682" y="416" width="379" height="295"/>
@@ -710,7 +710,7 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <buttonCell type="push" title="0" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="1bf-Wp-uJ3">
+                                <buttonCell type="push" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="1bf-Wp-uJ3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -746,7 +746,7 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <buttonCell type="push" title="0" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="xA7-eJ-818">
+                                <buttonCell type="push" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" transparent="YES" imageScaling="proportionallyDown" inset="2" id="xA7-eJ-818">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -769,7 +769,7 @@
                         </buttonCell>
                         <cells>
                             <column>
-                                <buttonCell type="push" title="C" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9ET-GW-lHb">
+                                <buttonCell type="push" title="C" bezelStyle="rounded" alignment="center" borderStyle="border" tag="-1" imageScaling="proportionallyDown" inset="2" id="9ET-GW-lHb">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <connections>
@@ -779,6 +779,10 @@
                                 <buttonCell type="push" title="CA" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qWo-uj-Eks">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                     <connections>
                                         <action selector="clearAll:" target="ovS-g3-PnY" id="9qc-5q-aDc"/>
                                     </connections>
@@ -822,7 +826,7 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                                <buttonCell type="push" title="/" bezelStyle="rounded" alignment="center" borderStyle="border" tag="1005" imageScaling="proportionallyDown" inset="2" id="Pxh-Ro-OkU">
+                                <buttonCell type="push" title="/" bezelStyle="rounded" alignment="center" borderStyle="border" tag="1004" imageScaling="proportionallyDown" inset="2" id="Pxh-Ro-OkU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
