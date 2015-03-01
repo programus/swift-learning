@@ -18,4 +18,11 @@
          location = "group:Part II/Calculator/Calculator.xcodeproj">
       </FileRef>
    </Group>
+   <Group
+      location = "container:"
+      name = "Part III">
+      <FileRef
+         location = "group:Part III/MathPaper/MathPaper/MathPaper.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>
