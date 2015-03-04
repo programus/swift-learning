@@ -1,0 +1,41 @@
+pi = a(1) * 4
+
+define sin(x) {
+    return s(x);
+}
+
+define cos(x) {
+    return c(x);
+}
+
+define tan(x) {
+    return s(x) / c(x);
+}
+
+define tg(x) {
+    return tan(x);
+}
+
+define ctg(x) {
+    return 1.0 / tan(x);
+}
+
+define atan(x) {
+    return a(x);
+}
+
+define asin(x) {
+    return a(x / sqrt(1 - x * x));
+}
+
+define acos(x) {
+    return a(sqrt(1 - x * x) / x);
+}
+
+define log(x) {
+    return l(x);
+}
+
+define ln(x) {
+    return e(x);
+}

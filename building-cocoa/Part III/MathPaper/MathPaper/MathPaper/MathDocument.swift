@@ -19,6 +19,11 @@ class MathDocument: NSDocument {
         super.windowControllerDidLoadNib(aController)
         // Add any code here that needs to be executed once the windowController has loaded the document's window.
     }
+    
+    override func makeWindowControllers() {
+        let ctl = PagerContoller(windowNibName: self.windowNibName!)
+        self.addWindowController(ctl)
+    }
 
     override class func autosavesInPlace() -> Bool {
         return true

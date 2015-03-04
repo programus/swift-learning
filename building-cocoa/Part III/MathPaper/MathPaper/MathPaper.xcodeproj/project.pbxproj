@@ -6,13 +6,43 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B6F71CA21AA2BC3F0079C414 /* Evaluator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B6F71CA31AA2BC400079C414 /* Build configuration list for PBXAggregateTarget "Evaluator" */;
+			buildPhases = (
+				B6F71CAB1AA2BE520079C414 /* CopyFiles */,
+			);
+			dependencies = (
+			);
+			name = Evaluator;
+			productName = Evaluator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		B6F71C6C1AA1E0420079C414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71C6B1AA1E0420079C414 /* AppDelegate.swift */; };
 		B6F71C6E1AA1E0420079C414 /* MathDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71C6D1AA1E0420079C414 /* MathDocument.swift */; };
 		B6F71C711AA1E0420079C414 /* PaperWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F71C6F1AA1E0420079C414 /* PaperWindow.xib */; };
 		B6F71C731AA1E0420079C414 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F71C721AA1E0420079C414 /* Images.xcassets */; };
 		B6F71C761AA1E0420079C414 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F71C741AA1E0420079C414 /* MainMenu.xib */; };
+		B6F71CAC1AA2BE630079C414 /* init.bc in CopyFiles */ = {isa = PBXBuildFile; fileRef = B6F71CA81AA2BCD60079C414 /* init.bc */; };
+		B6F71CB41AA5DDEC0079C414 /* PagerContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71CB31AA5DDEC0079C414 /* PagerContoller.swift */; };
+		B6F71CB51AA5E9ED0079C414 /* init.bc in Resources */ = {isa = PBXBuildFile; fileRef = B6F71CA81AA2BCD60079C414 /* init.bc */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B6F71CAB1AA2BE520079C414 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				B6F71CAC1AA2BE630079C414 /* init.bc in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B6F71C661AA1E0420079C414 /* MathPaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathPaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +52,9 @@
 		B6F71C701AA1E0420079C414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PaperWindow.xib; sourceTree = "<group>"; };
 		B6F71C721AA1E0420079C414 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B6F71C751AA1E0420079C414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B6F71C911AA2BB990079C414 /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = System/Library/Frameworks/AppleScriptObjC.framework; sourceTree = SDKROOT; };
+		B6F71CA81AA2BCD60079C414 /* init.bc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.bc; path = MathPaper/init.bc; sourceTree = "<group>"; };
+		B6F71CB31AA5DDEC0079C414 /* PagerContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagerContoller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +71,9 @@
 		B6F71C5D1AA1E0420079C414 = {
 			isa = PBXGroup;
 			children = (
+				B6F71CA71AA2BC7B0079C414 /* Evaluator */,
 				B6F71C681AA1E0420079C414 /* MathPaper */,
+				B6F71C901AA2BB990079C414 /* Frameworks */,
 				B6F71C671AA1E0420079C414 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +91,7 @@
 			children = (
 				B6F71C6B1AA1E0420079C414 /* AppDelegate.swift */,
 				B6F71C6D1AA1E0420079C414 /* MathDocument.swift */,
+				B6F71CB31AA5DDEC0079C414 /* PagerContoller.swift */,
 				B6F71C6F1AA1E0420079C414 /* PaperWindow.xib */,
 				B6F71C721AA1E0420079C414 /* Images.xcassets */,
 				B6F71C741AA1E0420079C414 /* MainMenu.xib */,
@@ -70,6 +106,22 @@
 				B6F71C6A1AA1E0420079C414 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6F71C901AA2BB990079C414 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6F71C911AA2BB990079C414 /* AppleScriptObjC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6F71CA71AA2BC7B0079C414 /* Evaluator */ = {
+			isa = PBXGroup;
+			children = (
+				B6F71CA81AA2BCD60079C414 /* init.bc */,
+			);
+			name = Evaluator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +156,9 @@
 					B6F71C651AA1E0420079C414 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
+					B6F71CA21AA2BC3F0079C414 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 				};
 			};
 			buildConfigurationList = B6F71C611AA1E0420079C414 /* Build configuration list for PBXProject "MathPaper" */;
@@ -120,6 +175,7 @@
 			projectRoot = "";
 			targets = (
 				B6F71C651AA1E0420079C414 /* MathPaper */,
+				B6F71CA21AA2BC3F0079C414 /* Evaluator */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F71CB51AA5E9ED0079C414 /* init.bc in Resources */,
 				B6F71C711AA1E0420079C414 /* PaperWindow.xib in Resources */,
 				B6F71C731AA1E0420079C414 /* Images.xcassets in Resources */,
 				B6F71C761AA1E0420079C414 /* MainMenu.xib in Resources */,
@@ -142,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F71CB41AA5DDEC0079C414 /* PagerContoller.swift in Sources */,
 				B6F71C6E1AA1E0420079C414 /* MathDocument.swift in Sources */,
 				B6F71C6C1AA1E0420079C414 /* AppDelegate.swift in Sources */,
 			);
@@ -268,6 +326,20 @@
 			};
 			name = Release;
 		};
+		B6F71CA41AA2BC400079C414 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B6F71CA51AA2BC400079C414 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -285,6 +357,14 @@
 			buildConfigurations = (
 				B6F71C861AA1E0420079C414 /* Debug */,
 				B6F71C871AA1E0420079C414 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B6F71CA31AA2BC400079C414 /* Build configuration list for PBXAggregateTarget "Evaluator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6F71CA41AA2BC400079C414 /* Debug */,
+				B6F71CA51AA2BC400079C414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
