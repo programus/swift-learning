@@ -50,6 +50,10 @@ class PagerContoller: NSWindowController {
         fromEvaluator.readInBackgroundAndNotify()
     }
     
+    override func windowTitleForDocumentDisplayName(displayName: String) -> String {
+        return "MathPaper: \(displayName)"
+    }
+    
     func textDidChange(notification: NSNotification) {
         if let key = self.window?.currentEvent?.characters {
             if key == "\r" {
@@ -81,8 +85,7 @@ class PagerContoller: NSWindowController {
     func gotData(notification: NSNotification) {
         if let data: NSData = notification.userInfo?[NSFileHandleNotificationDataItem] as? NSData {
             if let str = NSString(data: data, encoding: NSASCIIStringEncoding) {
-                theText.replaceCharactersInRange(NSMakeRange(theText.textStorage!.length, 0), withString: str)
-                theText.replaceCharactersInRange(NSMakeRange(theText.textStorage!.length, 0), withString: separator)
+                appendResult(str)
                 theText.scrollRangeToVisible(NSMakeRange(theText.textStorage!.length, 0))
             }
         }
@@ -90,5 +93,33 @@ class PagerContoller: NSWindowController {
         fromEvaluator.readInBackgroundAndNotify()
         theText.editable = true
     }
+    
+    func appendResult(result: String) {
+        if let textStorage = theText.textStorage {
+            let align = NSMutableParagraphStyle()
+            align.alignment = NSTextAlignment.RightTextAlignment
+            let font = NSFont.boldSystemFontOfSize(20)
+            let attrs = [
+                NSFontAttributeName: font,
+                NSParagraphStyleAttributeName: align
+            ]
+            
+            let attrStr = NSAttributedString(string: result, attributes: attrs)
+            let oldAttrs = textStorage.attributesAtIndex(0, effectiveRange: nil)
+            
+            textStorage.beginEditing()
+            textStorage.appendAttributedString(attrStr)
+            textStorage.appendAttributedString(NSAttributedString(string: separator, attributes: oldAttrs))
+            textStorage.endEditing()
+        }
+    }
 
+}
+
+extension NSTextView {
+    func appendString(str: String) {
+        if let len = self.textStorage?.length {
+            self.replaceCharactersInRange(NSMakeRange(len, 0), withString: str)
+        }
+    }
 }
