@@ -12,7 +12,7 @@
 				<string>matp</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>file-icon_128x128</string>
 			<key>CFBundleTypeName</key>
 			<string>MathPaper</string>
 			<key>CFBundleTypeOSTypes</key>

@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		B660B99F1AAC887C00AAF486 /* file-icon_128x128.png in Resources */ = {isa = PBXBuildFile; fileRef = B660B99E1AAC887C00AAF486 /* file-icon_128x128.png */; };
 		B6F71C6C1AA1E0420079C414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71C6B1AA1E0420079C414 /* AppDelegate.swift */; };
 		B6F71C6E1AA1E0420079C414 /* MathDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F71C6D1AA1E0420079C414 /* MathDocument.swift */; };
 		B6F71C711AA1E0420079C414 /* PaperWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6F71C6F1AA1E0420079C414 /* PaperWindow.xib */; };
@@ -45,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B660B99E1AAC887C00AAF486 /* file-icon_128x128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "file-icon_128x128.png"; path = "MathPaper/icons/file-icon_128x128.png"; sourceTree = "<group>"; };
 		B6F71C661AA1E0420079C414 /* MathPaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathPaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6F71C6A1AA1E0420079C414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6F71C6B1AA1E0420079C414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B660B99D1AAC885D00AAF486 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				B660B99E1AAC887C00AAF486 /* file-icon_128x128.png */,
+			);
+			name = icons;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		B6F71C5D1AA1E0420079C414 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +106,7 @@
 				B6F71C6F1AA1E0420079C414 /* PaperWindow.xib */,
 				B6F71C721AA1E0420079C414 /* Images.xcassets */,
 				B6F71C741AA1E0420079C414 /* MainMenu.xib */,
+				B660B99D1AAC885D00AAF486 /* icons */,
 				B6F71C691AA1E0420079C414 /* Supporting Files */,
 			);
 			path = MathPaper;
@@ -185,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B660B99F1AAC887C00AAF486 /* file-icon_128x128.png in Resources */,
 				B6F71CB51AA5E9ED0079C414 /* init.bc in Resources */,
 				B6F71C711AA1E0420079C414 /* PaperWindow.xib in Resources */,
 				B6F71C731AA1E0420079C414 /* Images.xcassets in Resources */,
@@ -359,6 +372,7 @@
 				B6F71C871AA1E0420079C414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6F71CA31AA2BC400079C414 /* Build configuration list for PBXAggregateTarget "Evaluator" */ = {
 			isa = XCConfigurationList;
@@ -367,6 +381,7 @@
 				B6F71CA51AA2BC400079C414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
