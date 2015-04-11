@@ -58,12 +58,12 @@ class PagerContoller: NSWindowController {
         if let key = self.window?.currentEvent?.characters {
             if key == "\r" {
                 if let text = theText.string {
-                    let length = countElements(text)
+                    let length = count(text)
                     
                     for var i = text.endIndex; i != text.startIndex; i = i.predecessor() {
                         if i == text.startIndex.successor() || text[i.predecessor().predecessor()] == Character("\n") {
                             let lastLine = text.substringFromIndex(i.predecessor())
-                            if countElements(lastLine) > 1 && lastLine != separator {
+                            if count(lastLine) > 1 && lastLine != separator {
                                 if let data = lastLine.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true) {
                                     toEvaluator.writeData(data)
                                     theText.editable = text.rangeOfString("=") != nil
@@ -85,7 +85,7 @@ class PagerContoller: NSWindowController {
     func gotData(notification: NSNotification) {
         if let data: NSData = notification.userInfo?[NSFileHandleNotificationDataItem] as? NSData {
             if let str = NSString(data: data, encoding: NSASCIIStringEncoding) {
-                appendResult(str)
+                appendResult(str as String)
                 theText.scrollRangeToVisible(NSMakeRange(theText.textStorage!.length, 0))
             }
         }
