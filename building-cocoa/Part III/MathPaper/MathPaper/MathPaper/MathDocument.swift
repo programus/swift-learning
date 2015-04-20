@@ -8,11 +8,23 @@
 
 import Cocoa
 
-class MathDocument: NSDocument {
-
+class MathDocument: NSDocument, NSCoding {
+    
+    var frame: NSRect!
+    var history: NSAttributedString!
+    
     override init() {
         super.init()
-        // Add your subclass-specific initialization here.
+        
+        // init the prompt
+        let inputAttr = [NSFontAttributeName: NSFont.systemFontOfSize(12)]
+        let promptAttr = [NSFontAttributeName: NSFont.boldSystemFontOfSize(10)]
+        let prompt = NSMutableAttributedString(string: "", attributes: inputAttr)
+        prompt.beginEditing()
+        prompt.appendAttributedString(NSAttributedString(string: "Enter a math expression and hit return:", attributes: promptAttr))
+        prompt.appendAttributedString(NSAttributedString(string: "\n", attributes: inputAttr))
+        prompt.endEditing()
+        history = prompt
     }
 
     override func windowControllerDidLoadNib(aController: NSWindowController) {
@@ -34,18 +46,40 @@ class MathDocument: NSDocument {
         // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this property and override -makeWindowControllers instead.
         return "PaperWindow"
     }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeRect(frame)
+        aCoder.encodeObject(history)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        frame = aDecoder.decodeRect()
+        if let attributedString = aDecoder.decodeObject() as? NSAttributedString {
+            history = attributedString
+        }
+    }
 
     override func dataOfType(typeName: String, error outError: NSErrorPointer) -> NSData? {
-        // Insert code here to write your document to data of the specified type. If outError != nil, ensure that you create and set an appropriate error when returning nil.
-        // You can also choose to override fileWrapperOfType:error:, writeToURL:ofType:error:, or writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
+        if typeName == "MathPaper.MathPaper" {
+            for element in windowControllers {
+                if let ctrl = element as? PagerContoller {
+                    ctrl.synchronizeData()
+                }
+            }
+            return NSArchiver.archivedDataWithRootObject(self)
+        }
         outError.memory = NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
         return nil
     }
 
     override func readFromData(data: NSData, ofType typeName: String, error outError: NSErrorPointer) -> Bool {
-        // Insert code here to read your document from the given data of the specified type. If outError != nil, ensure that you create and set an appropriate error when returning false.
-        // You can also choose to override readFromFileWrapper:ofType:error: or readFromURL:ofType:error: instead.
-        // If you override either of these, you should also override -isEntireFileLoaded to return NO if the contents are lazily loaded.
+        if typeName == "MathPaper.MathPaper" {
+            if let temp = NSUnarchiver.unarchiveObjectWithData(data) as? MathDocument {
+                frame = temp.frame
+                history = temp.history
+                return true
+            }
+        }
         outError.memory = NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
         return false
     }

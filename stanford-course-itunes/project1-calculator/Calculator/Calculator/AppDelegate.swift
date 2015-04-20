@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Calculator
 //
-//  Created by 王元 on 15/4/11.
+//  Created by Programus on 15/4/11.
 //  Copyright (c) 2015年 Programus. All rights reserved.
 //
 

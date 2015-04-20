@@ -26,6 +26,17 @@ class PagerContoller: NSWindowController {
             win.makeFirstResponder(theText)
         }
         
+        // initialize document
+        if let doc = self.document as? MathDocument {
+            let textStorage = theText.textStorage!
+            textStorage.beginEditing()
+            textStorage.setAttributedString(doc.history)
+            textStorage.endEditing()
+            if let frame = doc.frame {
+                window!.setFrame(frame, display: true)
+            }
+        }
+        
         let exePath = "/usr/bin/bc"
         let initScriptPath = NSBundle.mainBundle().pathForResource("init.bc", ofType: nil)
         
@@ -56,6 +67,9 @@ class PagerContoller: NSWindowController {
     
     func textDidChange(notification: NSNotification) {
         if let key = self.window?.currentEvent?.characters {
+            if let doc = document as? MathDocument {
+                doc.updateChangeCount(NSDocumentChangeType.ChangeDone)
+            }
             if key == "\r" {
                 if let text = theText.string {
                     let length = count(text)
@@ -111,6 +125,13 @@ class PagerContoller: NSWindowController {
             textStorage.appendAttributedString(attrStr)
             textStorage.appendAttributedString(NSAttributedString(string: separator, attributes: oldAttrs))
             textStorage.endEditing()
+        }
+    }
+    
+    func synchronizeData() {
+        if let doc = document as? MathDocument {
+            doc.history = theText.textStorage!
+            doc.frame = window!.frame
         }
     }
 

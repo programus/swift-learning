@@ -55,5 +55,41 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeDescription</key>
+			<string>MathPaper</string>
+			<key>UTTypeIconFile</key>
+			<string>file-icon_128x128</string>
+			<key>UTTypeIdentifier</key>
+			<string>$(PRODUCT_MODULE_NAME).MathPaper</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>matp</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+	<key>UTImportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeDescription</key>
+			<string>MathPaper</string>
+			<key>UTTypeIconFile</key>
+			<string>file-icon_128x128</string>
+			<key>UTTypeIdentifier</key>
+			<string>$(PRODUCT_MODULE_NAME).MathPaper</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>matp</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

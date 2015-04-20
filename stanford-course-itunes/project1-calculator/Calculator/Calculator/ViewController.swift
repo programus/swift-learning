@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Calculator
 //
-//  Created by 王元 on 15/4/11.
+//  Created by Programus on 15/4/11.
 //  Copyright (c) 2015年 Programus. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     var userIsTypingDigit = false
     
-    var operandStack = Array<Double>()
+    var brain = CalculatorBrain()
     
     var displayValue: Double {
         get {
@@ -27,37 +27,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func operate(sender: UIButton) {
-        let operation = sender.currentTitle!
         if userIsTypingDigit {
             enter()
         }
-        switch operation {
-        case "×":
-            performOperation {$0 * $1}
-        case "÷":
-            performOperation {$1 / $0}
-        case "+":
-            performOperation {$0 + $1}
-        case "−":
-            performOperation {$1 - $0}
-        case "√":
-            performUnaryOperation {sqrt($0)}
-        default:
-            break
-        }
-    }
-    
-    func performOperation(operation: (Double, Double) -> Double) {
-        if operandStack.count >= 2 {
-            displayValue = operation(operandStack.removeLast(), operandStack.removeLast())
-            enter()
-        }
-    }
-    
-    func performUnaryOperation(operation: Double -> Double) {
-        if operandStack.count >= 1 {
-            displayValue = operation(operandStack.removeLast())
-            enter()
+        if let operation = sender.currentTitle {
+            if let result = brain.performOperation(operation) {
+                displayValue = result
+            } else {
+                displayValue = 0
+            }
         }
     }
     
@@ -73,8 +51,11 @@ class ViewController: UIViewController {
     
     @IBAction func enter() {
         userIsTypingDigit = false
-        operandStack.append(displayValue)
-        println("operandStack = \(operandStack)")
+        if let result = brain.pushOperand(displayValue) {
+            displayValue = result
+        } else {
+            displayValue = 0
+        }
     }
 }
 
