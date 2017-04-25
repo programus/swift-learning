@@ -96,3 +96,32 @@ d
 d.count
 
 arc4random_uniform(UInt32(10))
+
+func nameClosure() -> () -> Void {
+  let name = "Tom"
+  return {
+    print(name)
+  }
+}
+
+let yourName = nameClosure()
+yourName()
+
+var s = ["t", "h", "i", "s"]
+s.sort() {
+  s1, s2 in
+  s1 > s2
+}
+s
+s.sortInPlace()
+s
+
+let a = [["00", "01", "02"],
+["10", "11", "12"],
+["20", "21", "22"]]
+
+a[1][2]
+a[1]
+
+String(format: "%02d", 0)
+

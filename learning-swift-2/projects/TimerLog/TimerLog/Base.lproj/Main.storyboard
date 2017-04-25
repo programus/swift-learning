@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimerLog" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxj-lM-eQy">
+                                <rect key="frame" x="0.0" y="20" width="600" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="6s1-re-5W9"/>
+                                    <constraint firstAttribute="width" constant="600" id="ujS-0L-cYN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="109"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iA8-Xy-m8M">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="BMD-Xq-QYJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="Mjk-K8-Iax"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="timerCtrlTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JIO-JC-kMi"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="eq4-mE-IsB">
+                                <rect key="frame" x="20" y="500" width="560" height="100"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="w1n-i0-1BQ"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="studySessionCell" id="EAt-eE-nId">
+                                        <rect key="frame" x="0.0" y="49.5" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EAt-eE-nId" id="zT3-ou-cvK">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eq4-mE-IsB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5aG-nF-X5l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eq4-mE-IsB" secondAttribute="trailing" id="Gii-JK-VzY"/>
+                            <constraint firstItem="Pxj-lM-eQy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RAg-BG-f8b"/>
+                            <constraint firstItem="iA8-Xy-m8M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xnz-IC-Yaz"/>
+                            <constraint firstItem="eq4-mE-IsB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="b4U-Kz-knB"/>
+                            <constraint firstItem="Pxj-lM-eQy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="buT-Ks-Eow"/>
+                            <constraint firstItem="iA8-Xy-m8M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nH2-vv-nVI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eq4-mE-IsB" secondAttribute="bottom" id="yiF-Aj-tf4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="studySessionTable" destination="eq4-mE-IsB" id="Srn-Ng-O9A"/>
+                        <outlet property="timerCtrlButton" destination="iA8-Xy-m8M" id="u05-8T-dAY"/>
+                        <outlet property="timerLabel" destination="Pxj-lM-eQy" id="p3I-nX-YHm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325" y="391"/>
+        </scene>
+    </scenes>
+</document>

@@ -16,10 +16,27 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>Levels</key>
+	<array>
+		<array>
+			<string>8888888888888</string>
+			<string>8000d00000008</string>
+			<string>8000000000008</string>
+			<string>8000d0000d008</string>
+			<string>8000000b00008</string>
+			<string>8000000000008</string>
+			<string>8000000d00008</string>
+			<string>800000h000008</string>
+			<string>8000d00000008</string>
+			<string>8888888888888</string>
+		</array>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -28,9 +45,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarHidden</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
-		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
